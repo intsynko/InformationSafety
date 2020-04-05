@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a322359b8f7e145bbbc58a50aae30a, type: 3}
+  m_Name: Gopnic
+  m_EditorClassIdentifier: 
+  QusetionSet:
+  - {fileID: 11400000, guid: 0e674863b3f1f484cb348d6f5336310f, type: 2}
+  - {fileID: 11400000, guid: 7b294982deb72924ba6f35e79dd7a3e3, type: 2}
+  - {fileID: 11400000, guid: 13cff623d69aecd4bbba1c1853b5b709, type: 2}
