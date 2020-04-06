@@ -5,6 +5,8 @@ using Zenject;
 
 public class Chest : MonoBehaviour
 {
+    public string MySpecificName;
+    [Inject] private SaveManager saveManager;
     public List<AssetItem> AssetItems;
     public MyEvent OnOpen;
 
@@ -22,6 +24,10 @@ public class Chest : MonoBehaviour
         cloud.SetActive(false);
         OnOpen.Invoke();
         AssetItems = await inventorySelectorMenu.OpenBox(AssetItems);
-        
+    }
+
+    private void OnDestroy()
+    {
+        saveManager.SaveObject(JsonUtility.ToJson(AssetItems), "MySpecificName");
     }
 }

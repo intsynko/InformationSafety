@@ -8,13 +8,18 @@ public abstract class BaseInvertory : MonoBehaviour
 {
     [SerializeField] public Transform baseContainer;
 
-    public void Render(List<AssetItem> assetItems)
+    public virtual void Render(List<AssetItem> assetItems)
     {
-        foreach (Transform child in baseContainer)
+        RenderContaier(assetItems, baseContainer);
+    }
+
+    protected void RenderContaier(List<AssetItem> assetItems, Transform container)
+    {
+        foreach (Transform child in container)
             Destroy(child.gameObject);
         assetItems.ForEach(item =>
         {
-            var obj = Instantiate(GetPresenter(), baseContainer);
+            var obj = Instantiate(GetPresenter(), container);
             Initialisation(obj, item);
         });
     }

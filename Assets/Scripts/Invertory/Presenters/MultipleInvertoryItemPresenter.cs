@@ -7,10 +7,10 @@ public class MultipleInvertoryItemPresenter : AbstractInvertorItemPresenter
 {
     protected Transform additionContainer;
 
-    public void Init(Transform draggingParent, Transform additionContainer)
+    public void Init(Transform draggingParent, Transform baseContainer, Transform additionContainer)
     {
         this.draggingParent = draggingParent;
-        this.originalContainer = transform.parent;
+        this.originalContainer = baseContainer;
         this.additionContainer = additionContainer;
     }
 

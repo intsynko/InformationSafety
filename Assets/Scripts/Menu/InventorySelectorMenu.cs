@@ -2,9 +2,12 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class InventorySelectorMenu : MonoBehaviour
 {
+    [Inject] private SaveManager saveManager;
+
     [SerializeField] private Invertory monoInventory;
     [SerializeField] private BoxInvertory boxInvertory;
 
@@ -19,12 +22,10 @@ public class InventorySelectorMenu : MonoBehaviour
     {
         if (!monoInventory.IsOpened)
             animationBase["Invertoty"].speed = 1;
-        else{
+        else {
             animationBase["Invertoty"].speed = -1;
             animationBase["Invertoty"].time = animationBase["Invertoty"].length;
         }
-        //animationBase.Play("InvertotyClose");
-        // else animationBase.Play("InvertotyOpen");
         animationBase.Play("Invertoty");
         monoInventory.IsOpened = !monoInventory.IsOpened;
     }
@@ -44,6 +45,7 @@ public class InventorySelectorMenu : MonoBehaviour
     public async void CloseBox()
     {
         toReturn = boxInvertory.CollectBoxRest();
+        saveManager.dataToSave.playerAssetItems = boxInvertory.CollectPlayerRest();
         isBoxOpened = false;
         animationBox["InventoryBox"].speed = -1;
         animationBox["InventoryBox"].time = animationBox["InventoryBox"].length;

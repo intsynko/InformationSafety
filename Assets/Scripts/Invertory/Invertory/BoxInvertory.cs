@@ -5,13 +5,25 @@ using Zenject;
 
 public class BoxInvertory : BaseInvertory
 {
+    [Inject] private SaveManager saveManager;
     [SerializeField] protected MultipleInvertoryItemPresenter presenter;
     [SerializeField] private Transform additionalContainer;
+
+
+    /// <summary>
+    /// Отрисовать оба контейнера
+    /// </summary>
+    /// <param name="assetItems">То, что лежит в ящике</param>
+    public override void Render(List<AssetItem> assetItems)
+    {
+        base.Render(assetItems);
+        RenderContaier(saveManager.dataToSave.playerAssetItems, additionalContainer);
+    }
 
     public override void Initialisation(AbstractInvertorItemPresenter obj, IItem item)
     {
         var itemPresenter = (MultipleInvertoryItemPresenter)obj;
-        itemPresenter.Init(transform.parent, additionalContainer);
+        itemPresenter.Init(transform.parent, baseContainer,  additionalContainer);
         itemPresenter.Render(item);
     }
 
@@ -19,7 +31,7 @@ public class BoxInvertory : BaseInvertory
     {
         return presenter;
     }
-
+    
 
     /// <summary>
     /// Собрать остатки в коробке
@@ -29,7 +41,6 @@ public class BoxInvertory : BaseInvertory
     {
         return CollectRest(baseContainer);
     }
-
     /// <summary>
     /// Собрать остатки у игрока
     /// </summary>
@@ -38,7 +49,6 @@ public class BoxInvertory : BaseInvertory
     {
         return CollectRest(additionalContainer);
     }
-
     /// <summary>
     /// Собрать остатки в контейнере conrainer
     /// </summary>

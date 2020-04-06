@@ -18,6 +18,7 @@ public class DataToSave
     public string lastSceneName;
     public Vector3 lastPostion;
     public List<ScenePosition> scenePositions;
+    public List<AssetItem> playerAssetItems;
 
     /// <summary>
     /// Создание нового файла статистики
@@ -36,6 +37,7 @@ public class DataToSave
         new ScenePosition(){ SceneName="MainMenu" },
         new ScenePosition(){ SceneName="FirstScene",    spawnPosition = new Vector3(0, 4) },
         new ScenePosition(){ SceneName="Room",          spawnPosition = new Vector3(-8, 2) }
-    };
+        };
+        playerAssetItems = new List<AssetItem>();
     }
 }
