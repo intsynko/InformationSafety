@@ -16,8 +16,9 @@ public class BoxInvertory : BaseInvertory
     /// <param name="assetItems">То, что лежит в ящике</param>
     public override void Render(List<AssetItem> assetItems)
     {
-        base.Render(assetItems);
-        RenderContaier(saveManager.dataToSave.playerAssetItems, additionalContainer);
+        base.Render(assetItems); // рендерим коробку со всеми вещами коробки
+        // в доп контейнере рендерим то, что есть и игрока
+        RenderContaier(GetPlayerItems(), additionalContainer); 
     }
 
     public override void Initialisation(AbstractInvertorItemPresenter obj, IItem item)

@@ -5,15 +5,19 @@ using UnityEngine;
 public class MonoBehaviourSaver : StateSaver
 {
     public MonoBehaviour ToSave;
-    
 
-    public override void Apply(string serializeObject)
+    protected override string GetSpecificName()
+    {
+        return base.GetSpecificName() + "_monoBehaivor";
+    }
+
+    protected override void Apply(string serializeObject)
     {
         MonoBehaviourState state = JsonUtility.FromJson<MonoBehaviourState>(serializeObject);
         ToSave.enabled = state.enabled;
     }
 
-    public override string ToJson()
+    protected override string ToJson()
     {
         return JsonUtility.ToJson(new MonoBehaviourState()
         {

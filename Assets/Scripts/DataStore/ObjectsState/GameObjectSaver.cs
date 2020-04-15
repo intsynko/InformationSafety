@@ -6,14 +6,19 @@ public class GameObjectSaver : StateSaver
 {
     public GameObject ToSave;
 
-    public override void Apply(string serializeObject)
+    protected override string GetSpecificName()
+    {
+        return base.GetSpecificName() + "_gameObject";
+    }
+
+    protected override void Apply(string serializeObject)
     {
         GameObjectState state = JsonUtility.FromJson<GameObjectState>(serializeObject);
         // применить все сохраненные переменные
         ToSave.SetActive(state.enabled);
     }
 
-    public override string ToJson()
+    protected override string ToJson()
     {
         // сохранить все переменные
         return JsonUtility.ToJson(new GameObjectState()

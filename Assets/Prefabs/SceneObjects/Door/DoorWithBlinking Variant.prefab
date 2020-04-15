@@ -173,6 +173,19 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-1641230965882448493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235254523024522604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720fa83fd6c17144997c8c7033dd0814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecificObjectName: 
 --- !u!114 &1724503892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e02fac9f0ce10469675a49e858b8ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpecificName: door_to_first_room
+  SpecificName: {fileID: -1641230965882448493}
   ToSave: {fileID: 1724503892}
 --- !u!1001 &7992202445302395458
 PrefabInstance:
@@ -271,6 +284,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7676243580732512452, guid: c508371f5f8a1fd4b80ab0b7b054df00,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5430754854274319402, guid: c508371f5f8a1fd4b80ab0b7b054df00,
         type: 3}
       propertyPath: OnTeleport.m_PersistentCalls.m_Calls.Array.size
@@ -330,11 +348,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7676243580732512452, guid: c508371f5f8a1fd4b80ab0b7b054df00,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7020110208098448615, guid: c508371f5f8a1fd4b80ab0b7b054df00,
         type: 3}

@@ -45,7 +45,7 @@ public class InventorySelectorMenu : MonoBehaviour
     public async void CloseBox()
     {
         toReturn = boxInvertory.CollectBoxRest();
-        saveManager.dataToSave.playerAssetItems = boxInvertory.CollectPlayerRest();
+        boxInvertory.SavePlayerData(boxInvertory.CollectPlayerRest());
         isBoxOpened = false;
         animationBox["InventoryBox"].speed = -1;
         animationBox["InventoryBox"].time = animationBox["InventoryBox"].length;

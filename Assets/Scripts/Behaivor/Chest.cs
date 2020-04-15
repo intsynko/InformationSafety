@@ -5,29 +5,19 @@ using Zenject;
 
 public class Chest : MonoBehaviour
 {
-    public string MySpecificName;
     [Inject] private SaveManager saveManager;
-    public List<AssetItem> AssetItems;
+    public AssetItemsSaver AssetItemsSaver;
     public MyEvent OnOpen;
-
-    private GameObject cloud;
+    
     [Inject] private InventorySelectorMenu inventorySelectorMenu;
 
-    private void Start()
+    public async void Cloud_OnClick()
     {
-        cloud = transform.Find("Cloud").gameObject;
-        //cloud.OnClick += Cloud_OnClick;
-    }
-
-    public  async void Cloud_OnClick()
-    {
-        cloud.SetActive(false);
         OnOpen.Invoke();
-        AssetItems = await inventorySelectorMenu.OpenBox(AssetItems);
-    }
-
-    private void OnDestroy()
-    {
-        saveManager.SaveObject(JsonUtility.ToJson(AssetItems), "MySpecificName");
+        //AssetItemsSaver.Load(); // загружаем сохраненные изменения
+        // показываем меню инвенторя
+        AssetItemsSaver.ConvertAssetItemsToNames(await inventorySelectorMenu.OpenBox(AssetItemsSaver.GetItems()));
+        // сохраняем остатки в сундуке
+        AssetItemsSaver.Save();
     }
 }

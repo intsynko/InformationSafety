@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4533872250490798283}
   - component: {fileID: 4533872250490798276}
   - component: {fileID: 4533872250490798282}
+  - component: {fileID: 8924452121916423168}
+  - component: {fileID: 4117418791348505853}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -121,9 +123,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352719ee840e1a141ae4da9a6bb4f9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MySpecificName: 
+  AssetItemsSaver: {fileID: 4117418791348505853}
+  AssetItems: []
   OnOpen:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8924452121916423168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533872250490798278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720fa83fd6c17144997c8c7033dd0814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecificObjectName: 
+--- !u!114 &4117418791348505853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533872250490798278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af1f6f03b920234dbe3ee7aec58363a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecificName: {fileID: 8924452121916423168}
+  startAsset: []
 --- !u!1001 &6706400635161136392
 PrefabInstance:
   m_ObjectHideFlags: 0

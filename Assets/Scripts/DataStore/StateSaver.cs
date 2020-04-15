@@ -9,29 +9,43 @@ public abstract class StateSaver : MonoBehaviour
 {
     [Inject] protected JSONSaver jSONSaver;
     [Inject] protected SaveManager saveManager;
-    public string SpecificName;
+    public SpecificName SpecificName;
 
     private void Start()
     {
         Debug.Log("StateSaver: Start");
-        if (saveManager.IsObjectExists(SpecificName))
-            Apply(Read());
+        if (saveManager.IsObjectExists(GetSpecificName()))
+            Apply(Load());
+        else
+            FirstRun();
+    }
+
+    protected virtual void FirstRun()
+    {
+
+    }
+
+    protected virtual string GetSpecificName()
+    {
+        return SpecificName.SpecificObjectName;
     }
 
     public void Save()
     {
         Debug.Log("StateSaver: Save");
-        saveManager.SaveObject(ToJson(), SpecificName);
+        saveManager.SaveObject(ToJson(), GetSpecificName());
     }
 
-    public string Read()
+    public string Load()
     {
         Debug.Log("StateSaver: Read");
-        return saveManager.LoadObject(SpecificName);
+        return saveManager.LoadObject(GetSpecificName());
     }
 
-    public abstract string ToJson();
+    protected abstract string ToJson();
 
-    public abstract void Apply(string serializeObject);
+    protected abstract void Apply(string serializeObject);
+
+    
 
 }
