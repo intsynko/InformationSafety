@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: scroll
   m_EditorClassIdentifier: 
   name: "\u041A\u0440\u0443\u0436\u043E\u0447\u0435\u043A)"
-  spriteName: circle
-  _sprite: {fileID: 21300070, guid: 6db5340bb029755408acc0fe45e333b4, type: 3}
+  sprite: {fileID: 21300070, guid: 6db5340bb029755408acc0fe45e333b4, type: 3}

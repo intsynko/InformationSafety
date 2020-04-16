@@ -7,8 +7,8 @@ using UnityEngine;
 public class AssetItem : ScriptableObject, IItem
 {
     public string Name => name;
-    public string SpriteName => spriteName;
+    public Sprite Sprite => sprite;
 
     [SerializeField] private string name;
-    [SerializeField] private string spriteName;
+    [SerializeField] private Sprite sprite;
 }

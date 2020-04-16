@@ -15,5 +15,5 @@ MonoBehaviour:
   Text: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043A \u043F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0435\u043C\u0443"
   PointsForQuestion: 1
   NextQuestionNumber: 1
-  AlredyUsed: 1
+  AlredyUsed: 0
   PointsToUnlock: 0

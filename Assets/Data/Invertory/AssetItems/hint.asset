@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: hint
   m_EditorClassIdentifier: 
   name: "\u041C\u0430\u043D\u0438\u0444\u0435\u0441\u0442"
-  spriteName: list
-  _sprite: {fileID: 21300072, guid: 6db5340bb029755408acc0fe45e333b4, type: 3}
+  sprite: {fileID: 21300072, guid: 6db5340bb029755408acc0fe45e333b4, type: 3}

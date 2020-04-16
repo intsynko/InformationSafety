@@ -7,8 +7,6 @@ using Zenject;
 
 public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    [SerializeField] private SpritePool spritePool;
-
     [SerializeField] protected Text text;
     [SerializeField] protected Image image;
 
@@ -32,7 +30,7 @@ public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandle
     public void Render(IItem item)
     {
         text.text = item.Name;
-        image.sprite = spritePool.GetSpriteByName(item.SpriteName);
+        image.sprite = item.Sprite;
         this.Item = item;
     }
 

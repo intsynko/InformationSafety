@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4533872250490798282}
   - component: {fileID: 8924452121916423168}
   - component: {fileID: 4117418791348505853}
+  - component: {fileID: 4808500994044170487}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -123,12 +124,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352719ee840e1a141ae4da9a6bb4f9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MySpecificName: 
   AssetItemsSaver: {fileID: 4117418791348505853}
-  AssetItems: []
   OnOpen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2093202384410283471}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4808500994044170487}
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8924452121916423168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +177,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpecificName: {fileID: 8924452121916423168}
   startAsset: []
+--- !u!114 &4808500994044170487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533872250490798278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babe8cbacad280640a31ce41a3d497e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpecificName: {fileID: 8924452121916423168}
+  ToSave: {fileID: 2093202384410283471}
 --- !u!1001 &6706400635161136392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275,6 +310,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 938c08dcbb0caca4abcdf105fba797c8, type: 3}
+--- !u!1 &2093202384410283471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4619962738401951943, guid: 938c08dcbb0caca4abcdf105fba797c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6706400635161136392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2093202384410283470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4619962738401951942, guid: 938c08dcbb0caca4abcdf105fba797c8,

@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IItem
 {
     string Name { get; }
-    string SpriteName { get; }
+    Sprite Sprite { get; }
 }

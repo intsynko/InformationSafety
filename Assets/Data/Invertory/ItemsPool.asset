@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460d9e7cbf73a6c458acf13549712248, type: 3}
   m_Name: ItemsPool
   m_EditorClassIdentifier: 
-  SpriteItems: []
+  AssetItems:
+  - {fileID: 11400000, guid: 856e6828f11786e4f99079c325f907bd, type: 2}
+  - {fileID: 11400000, guid: 13a64be239060814cad25c2c704bceab, type: 2}
+  - {fileID: 11400000, guid: 16b479dae39a30740a55f81871853a1f, type: 2}

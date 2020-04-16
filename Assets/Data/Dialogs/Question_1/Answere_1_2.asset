@@ -15,5 +15,5 @@ MonoBehaviour:
   Text: "\u0412\u044B\u0439\u0442\u0438"
   PointsForQuestion: 0
   NextQuestionNumber: -1
-  AlredyUsed: 1
+  AlredyUsed: 0
   PointsToUnlock: 1
