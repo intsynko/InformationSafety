@@ -6,13 +6,14 @@ using Zenject;
 public class DoctorAnimController : MonoBehaviour
 {
     private Animator doctorAnim;
-    [Inject]
-    private JoysticController _joysticController;
-    public Vector2 Direction { get { return _joysticController.currentJoystick.Direction; } }
+    [Inject] private JoysticController _joysticController;
+    private Move move;
+    private Vector2 Direction { get { return move.Direction; }  }
     private static readonly int IsRunning = Animator.StringToHash("IsRunning");
 
     void Start()
     {
+        move = transform.parent.GetComponent<Move>();
         doctorAnim = GetComponent<Animator>();
     }
 

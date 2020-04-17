@@ -1,33 +1,69 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Threading.Tasks;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class Move : MonoBehaviour
 {
-    public float Speed = 2f;
+    public float rigidBodySpeed = 500f;
+    public float translateSpeed = 4f;
     [Inject] private JoysticController _joysticController;
     [Inject] private MySceneController _mySceneController;
     [Inject] private MessageBox _messageBox;
-    private Vector2 Direction { get { return _joysticController.currentJoystick.Direction; } }
+    [SerializeField] private MyAIPath myAIPath;
+    [SerializeField] private AIDestinationSetter destinationSetter;
+    private BoxCollider2D boxCollider2D;
+    private GameObject grafix;
+    public Vector2 Direction { get {
+            if (_moveByAIPath)
+                return myAIPath.desiredVelocity;
+            return _joysticController.currentJoystick.Direction;
+        }
+    }
+    private Rigidbody2D rigidbody2D;
+
+    private bool _moveByAIPath;
+
+
+    public async Task MoveToEntity(Transform transform)
+    {
+        destinationSetter.target = transform;
+        myAIPath.enabled = true;
+        _moveByAIPath = true;
+        myAIPath.isComplited = false;
+        boxCollider2D.enabled = false;
+        await Task.Yield();
+        while (!myAIPath.isComplited) await Task.Yield();
+        myAIPath.enabled = false;
+        _moveByAIPath = false;
+        boxCollider2D.enabled = true;
+    }
 
 
     // ToDO: вынести отсюда на хер телепор, далжен быть специльный класс Player
     private void Start()
     {
+        myAIPath.enabled = false;
+        grafix = transform.GetChild(0).gameObject;
+        boxCollider2D = GetComponent<BoxCollider2D>();
         _messageBox.SaveAnim();
         _mySceneController.TeleportMeIfIMust(gameObject);
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     { 
         TurnAround(Direction);
-        transform.Translate(Speed * Time.deltaTime * Direction);
+        //rigidbody2D.AddForce(rigidBodySpeed * Time.deltaTime * Direction);
+        transform.Translate(translateSpeed * Time.deltaTime * Direction);
     }
 
     private void TurnAround(Vector2 dir)
     {
-        if (dir.x > 0) transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-        else if (dir.x < 0) transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        Vector2 localScale = grafix.transform.localScale;
+        if (dir.x > 0) grafix.transform.localScale = new Vector2(Mathf.Abs(localScale.x), localScale.y);
+        else if (dir.x < 0) grafix.transform.localScale = new Vector2(-Mathf.Abs(localScale.x), localScale.y);
     }
 }

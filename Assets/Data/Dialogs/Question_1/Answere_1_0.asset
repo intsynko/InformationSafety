@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bfbea8df318774c83dff1fcd76ef38, type: 3}
   m_Name: Answere_1_0
   m_EditorClassIdentifier: 
-  Text: "\u0410 \u0442\u044B \u043A\u0442\u043E \u0442\u0430\u043A\u043E\u0439, \u0447\u0442\u043E\u0431\u044B
-    \u043C\u0435\u043D\u044F \u0442\u0430\u043A\u043E\u0435 \u0441\u043F\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044C"
+  Text: "\u0414\u0430\u043B\u0435\u0435"
   PointsForQuestion: 0
-  NextQuestionNumber: 2
+  NextQuestionNumber: 0
   AlredyUsed: 0
   PointsToUnlock: 0

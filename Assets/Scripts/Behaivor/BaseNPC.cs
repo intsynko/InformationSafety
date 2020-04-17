@@ -6,6 +6,7 @@ using Zenject;
 public class BaseNPC : MonoBehaviour
 {
     public MyEvent OnDialogEnd;
+    [Inject] private Move player;
     [SerializeField] private string Name;
     [SerializeField] private Dialog dialog;
     [SerializeField] private Sprite HeadPic;
@@ -13,7 +14,8 @@ public class BaseNPC : MonoBehaviour
 
     public async void StartDialog()
     {
-        await dialogController.StartDialog(dialog, Name, HeadPic);
+        await player.MoveToEntity(transform);
+        int points = await dialogController.StartDialog(dialog, Name, HeadPic);
         this.OnDialogEnd.Invoke();
     }
 }

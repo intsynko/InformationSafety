@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour
     
     [Inject] private InventorySelectorMenu inventorySelectorMenu;
 
-    public async void Cloud_OnClick()
+    public async void Open()
     {
         OnOpen.Invoke();
         //AssetItemsSaver.Load(); // загружаем сохраненные изменения

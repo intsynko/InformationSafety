@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bfbea8df318774c83dff1fcd76ef38, type: 3}
   m_Name: Answer_0_1
   m_EditorClassIdentifier: 
-  Text: "\u042F \u043C\u0430\u043B\u043E\u0439 \u0438\u0434\u0443 \u0434\u043E\u043C\u043E\u0439"
+  Text: "\u0417\u0434\u0440\u0430\u0441\u044C\u0442\u0435"
   PointsForQuestion: 0
   NextQuestionNumber: 1
   AlredyUsed: 0
