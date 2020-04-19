@@ -44,7 +44,7 @@ public class Move : MonoBehaviour
     }
 
 
-    // ToDO: вынести отсюда на хер телепор, далжен быть специльный класс Player
+    // ToDO: вынести отсюда на хер телепор, должен быть специльный класс Player
     private void Start()
     {
         myAIPath.enabled = false;
