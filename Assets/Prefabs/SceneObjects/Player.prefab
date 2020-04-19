@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3497265a3985cd04ba1e157364903d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBodySpeed: 500
-  translateSpeed: 4
+  Speed: 4
+  m_MovementSmoothing: 0.05
   myAIPath: {fileID: 9934186}
   destinationSetter: {fileID: 9934189}
 --- !u!114 &1550354562
@@ -179,7 +179,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

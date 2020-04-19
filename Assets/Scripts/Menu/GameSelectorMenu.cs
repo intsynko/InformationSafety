@@ -23,7 +23,7 @@ public class GameSelectorMenu : MonoBehaviour
     public void Save()
     {
         _messageBox.SaveAnim();
-        saveManager.Save();
+        saveManager.SavePlayerProgress();
     }
 
     public void OpenMenu()

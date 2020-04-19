@@ -53,7 +53,7 @@ public class MessageBox : MonoBehaviour
     /// <summary>
     /// Запустить анимацию сохранения
     /// </summary>
-    public async void SaveAnim()
+    public async Task SaveAnim()
     {
         _saveBar.SetActive(true);
         Animation saveBarAnim = _saveBar.GetComponent<Animation>();

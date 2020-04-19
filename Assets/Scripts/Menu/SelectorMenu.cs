@@ -14,7 +14,7 @@ public class SelectorMenu : MonoBehaviour
         string yes = "Продолжить";
         string no = "Отмена";
         // если есть предыдущие сохранения
-        if (_saveManager.isSaveDataExists())
+        if (_saveManager.IsPlayerStatisticExists())
             // если игрок не согласен их удалить - прерываем
             if (!await _messageBox.Question(message, yes, no))
                 return;
@@ -34,7 +34,7 @@ public class SelectorMenu : MonoBehaviour
     {
         try
         {
-            _saveManager.Load();
+            _saveManager.LoadPlayerProgress();
         }
         catch (System.IO.FileNotFoundException)
         {

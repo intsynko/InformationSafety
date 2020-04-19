@@ -7,13 +7,15 @@ using Zenject;
 
 public class Move : MonoBehaviour
 {
-    public float rigidBodySpeed = 500f;
-    public float translateSpeed = 4f;
+    public float Speed = 4f;
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+    [SerializeField] private MyAIPath myAIPath;
+    [SerializeField] private AIDestinationSetter destinationSetter;
+
     [Inject] private JoysticController _joysticController;
     [Inject] private MySceneController _mySceneController;
     [Inject] private MessageBox _messageBox;
-    [SerializeField] private MyAIPath myAIPath;
-    [SerializeField] private AIDestinationSetter destinationSetter;
+    
     private BoxCollider2D boxCollider2D;
     private GameObject grafix;
     public Vector2 Direction { get {
@@ -23,7 +25,7 @@ public class Move : MonoBehaviour
         }
     }
     private Rigidbody2D rigidbody2D;
-
+    private Vector3 m_Velocity = Vector3.zero;
     private bool _moveByAIPath;
 
 
@@ -56,8 +58,7 @@ public class Move : MonoBehaviour
     void Update()
     { 
         TurnAround(Direction);
-        //rigidbody2D.AddForce(rigidBodySpeed * Time.deltaTime * Direction);
-        transform.Translate(translateSpeed * Time.deltaTime * Direction);
+        rigidbody2D.velocity = Vector3.SmoothDamp(rigidbody2D.velocity, Direction * Speed, ref m_Velocity, m_MovementSmoothing);
     }
 
     private void TurnAround(Vector2 dir)

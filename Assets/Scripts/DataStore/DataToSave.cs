@@ -10,8 +10,6 @@ public enum EntityType { Wolf, Doctor};
 
 public class DataToSave
 {
-    public List<int> levelTrustStatic;
-    public List<int> dialogNumStatic;
     public DateTime lastSession; // дата последней сессии
     public DateTime gameStarted; // дата игра начата
     public DateTime dateTimeInGame;
@@ -19,6 +17,8 @@ public class DataToSave
     public Vector3 lastPostion;
     public List<ScenePosition> scenePositions;
     public List<string> playerAssetItems;
+
+    
 
     /// <summary>
     /// Создание нового файла статистики
@@ -31,8 +31,6 @@ public class DataToSave
         gameStarted = DateTime.Now;
         dateTimeInGame = DateTime.Now;
         lastSceneName = SceneManager.GetActiveScene().name;
-        levelTrustStatic = Enumerable.Repeat(0, 3).Select(n => { return 0; }).ToList();
-        dialogNumStatic = Enumerable.Repeat(0, 3).Select(n => { return -1; }).ToList();
         scenePositions = new List<ScenePosition>() {
         new ScenePosition(){ SceneName="MainMenu" },
         new ScenePosition(){ SceneName="FirstScene",    spawnPosition = new Vector3(0, 4) },

@@ -29,7 +29,7 @@ public class MySceneController
     {
         SaveLastScenePosition(player);
         SceneManager.LoadScene(sceneName);
-        _saveManager.Save();
+        _saveManager.SavePlayerProgress();
     }
 
     public void TeleportMeIfIMust(GameObject player)

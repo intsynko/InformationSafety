@@ -40,8 +40,8 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
-        LevelTrust = _saveManager.dataToSave.levelTrustStatic[(int)Proffesion];
-        dialogNum = _saveManager.dataToSave.dialogNumStatic[(int)Proffesion];
+        //LevelTrust = _saveManager.dataToSave.levelTrustStatic[(int)Proffesion];
+        //dialogNum = _saveManager.dataToSave.dialogNumStatic[(int)Proffesion];
         dialogSets = _dialogData.GetDialogSet(Proffesion);
         DayController.DayHasCome += DayController_DayHasCome;
         DayController.NightHasCome += DayController_NightHasCome;
@@ -67,8 +67,8 @@ public class NPC : MonoBehaviour
     private void SaveProgress()
     {
         Debug.Log("сохраняем");
-        _saveManager.dataToSave.levelTrustStatic[(int)Proffesion] = LevelTrust;
-        _saveManager.dataToSave.dialogNumStatic[(int)Proffesion] = dialogNum;
+        //_saveManager.dataToSave.levelTrustStatic[(int)Proffesion] = LevelTrust;
+        //_saveManager.dataToSave.dialogNumStatic[(int)Proffesion] = dialogNum;
         _messageBox.SaveAnim();
     }
 
