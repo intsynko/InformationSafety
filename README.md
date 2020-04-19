@@ -1,16 +1,19 @@
 ﻿# InformationSafety
+## Description
 This is a game about world, with information and 
 knowledges is main currency. 
-
-# Информационная Безопасность
-Это игра про человка попавшего в мир, в котором
-главной валютой являются знания и все стремятся их
-добыть.
 
 ## Run
 You can run open this project with Unity and run in project
 enviroment. Also you can play
 [ready relesed game](https://github.com/Kostya-228/InformationSafety/releases).
+
+
+## Описание
+Это игра про человка попавшего в мир, в котором
+главной валютой являются знания и все стремятся их
+добыть.
+
 
 ## Запуск
 Вы можете отрыть проект с помошью Unity и запустить 
