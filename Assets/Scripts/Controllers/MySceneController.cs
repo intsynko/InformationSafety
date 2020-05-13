@@ -34,7 +34,16 @@ public class MySceneController
 
     public void TeleportMeIfIMust(GameObject player)
     {
-        ScenePosition scenePosition = GetScenePositionByName(SceneManager.GetActiveScene().name);
+        ScenePosition scenePosition;
+        try
+        {
+            scenePosition = GetScenePositionByName(SceneManager.GetActiveScene().name);
+        }
+        catch (ArgumentOutOfRangeException) {
+            Debug.LogWarning("Для этой сцены нет заполненной");
+            return;
+        }
+        
         if (SceneManager.GetActiveScene().name != "MainMenu")
             _saveManager.dataToSave.lastSceneName = scenePosition.SceneName;
         if (scenePosition.SpecificPosition != Vector3.zero)
