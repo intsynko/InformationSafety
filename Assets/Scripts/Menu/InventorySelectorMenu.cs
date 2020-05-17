@@ -3,10 +3,12 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using System;
 
 public class InventorySelectorMenu : MonoBehaviour
 {
     [Inject] private SaveManager saveManager;
+    [Inject] private MessageBox messageBox;
 
     [SerializeField] private Invertory monoInventory;
     [SerializeField] private BoxInvertory boxInvertory;
@@ -15,22 +17,24 @@ public class InventorySelectorMenu : MonoBehaviour
     [SerializeField] private Animation animationBase;
     [SerializeField] private Animation animationBox;
 
+    private bool monoInventoryIsOpened = false;
+
     private bool isBoxOpened;
-    private List<AssetItem> toReturn;
+    private List<AssetItems> toReturn;
 
     public void OpenCloseMonoInvertory()
     {
-        if (!monoInventory.IsOpened)
+        if (!monoInventoryIsOpened)
             animationBase["Invertoty"].speed = 1;
         else {
             animationBase["Invertoty"].speed = -1;
             animationBase["Invertoty"].time = animationBase["Invertoty"].length;
         }
         animationBase.Play("Invertoty");
-        monoInventory.IsOpened = !monoInventory.IsOpened;
+        monoInventoryIsOpened = !monoInventoryIsOpened;
     }
 
-    public async Task<List<AssetItem>> OpenBox(List<AssetItem> assetItems)
+    public async Task<List<AssetItems>> OpenBox(List<AssetItems> assetItems)
     {
         ClickController.GlobalEnabled = false;
         boxInvertory.gameObject.SetActive(true);
@@ -46,6 +50,7 @@ public class InventorySelectorMenu : MonoBehaviour
     {
         toReturn = boxInvertory.CollectBoxRest();
         boxInvertory.SavePlayerData(boxInvertory.CollectPlayerRest());
+        messageBox.SaveAnim();
         isBoxOpened = false;
         animationBox["InventoryBox"].speed = -1;
         animationBox["InventoryBox"].time = animationBox["InventoryBox"].length;

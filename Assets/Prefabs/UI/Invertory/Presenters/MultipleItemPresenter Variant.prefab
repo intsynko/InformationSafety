@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df708efc5d608a4699ddfc15948d3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePool: {fileID: 11400000, guid: 7727534e6dfcf214ab9d715f34800ebc, type: 2}
-  text: {fileID: 3127506110709592847}
+  amount: {fileID: 5762030129885428165}
+  itemName: {fileID: 3127506110709592847}
   image: {fileID: 1094243557537749793}
 --- !u!1001 &690459102989386495
 PrefabInstance:
@@ -155,6 +155,18 @@ MonoBehaviour:
 --- !u!114 &3127506110709592847 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2518113459542651376, guid: 480a5edec4b8fdd439315557450be130,
+    type: 3}
+  m_PrefabInstance: {fileID: 690459102989386495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5762030129885428165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5072134252568853306, guid: 480a5edec4b8fdd439315557450be130,
     type: 3}
   m_PrefabInstance: {fileID: 690459102989386495}
   m_PrefabAsset: {fileID: 0}

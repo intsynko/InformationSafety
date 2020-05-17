@@ -824,7 +824,6 @@ MonoBehaviour:
   presenter: {fileID: 7792286158962177205, guid: 7dca901db4bd050438118872b0db681a,
     type: 3}
   assetItems: []
-  IsOpened: 0
 --- !u!111 &4780340907790110569
 Animation:
   m_ObjectHideFlags: 0
