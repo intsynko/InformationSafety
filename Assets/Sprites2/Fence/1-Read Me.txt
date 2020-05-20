@@ -1,0 +1,57 @@
+
+	      (please read carefully)
+
+		1 - WELCOME CREATOR
+
+	Hello, thank you for Purchasing this LA Fence Sprite Pack. 
+If you Purchased this pack, you can use the assets to your will.
+However they are our Graphics, but we are allowing you to use them for all your needs. 
+
+		2 - TERMS AND CONDITIONS
+
+	Your NOT allowed to copy this pack and/or give it away.
+If you did't buy this pack, you aren't allowed to use it. That is called Theft.
+
+
+ 		3 - FEATURES AND OFFERS
+
+	This Fence Pack features over 30+ different types of Fences for you needs.
+Ranging from Brick, Obsidian, Iron, Metal to wood types like Maple, Walnut,and Jungle. 
+All the graphics are Pixelated and have an aspect ratio from around 6-40 pixels for both width and length, depending on the fence.
+Each sprite has its own individual file. The files are all in .PNG extensions.
+You can use all the pre-made sprites or you can create you own fence from all the Sprite parts(see part 5).
+
+		4 - GETTING STARTED
+
+	Using the Pre-made assets for your Game is easy.
+Go ahead and open the '2-Fence placing.gif' in the folder to get a preview.
+Copy and Pasting the fence sprites is as easy as the Preview!
+
+	We also added Posts and end pieces for fences to make them look finished.
+Go ahead and open the '3-Posts and end pieces.gif' in the folder to get a preview.
+Adding a Endpiece at the end of a fence gives it a new look, but its optional.
+
+		5 - CUSTOM FENCES
+
+	Make and customize your own fences using all the premade parts 
+like Posts, lanterns, Planks, ropes, and flags. Using all the Parts in the Premade Parts folder, 
+you can select different parts and connnect them together in a PNG or other file using proffessional or free editor.
+Go ahead and open the '4-Custom Fences.gif' in the folder to get a preview of how its done.
+There are hundreds of different Possibilites. Go Try it out!
+(Open the fence_spritesheet.png to see all the Fences, or open the individual_sprites folder.)
+
+		6 - CONTACT US
+
+NEED HELP? CONTACT US at :       	limitlessassets4u@gmail.com
+REQUEST TEXTURES? CONTACT US at : 	limitlessassets4u@gmail.com
+
+
+
+
+
+
+
+
+
+2019\03\19
+v1.1
