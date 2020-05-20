@@ -68,3 +68,10 @@ Assembly-CSharp.csproj
 Assembly-CSharp-Editor.csproj
 Who-Are-you.sln
 .vs
+Assets/dara/o_sunduk.mp3.meta
+Assets/dara/o_sunduk.mp3
+*.mp3
+Assets/dara/c_sunduk.mp3.meta
+Assets/dara/c_sunduk.mp3
+Assets/Scenes/FirstScene.unity
+Assets/Scenes/MainMenu.unity
