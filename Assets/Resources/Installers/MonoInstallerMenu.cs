@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using Zenject;
 
 public class MonoInstallerMenu : MonoInstaller
