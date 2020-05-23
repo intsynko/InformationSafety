@@ -7,15 +7,29 @@ using Zenject;
 
 public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    [SerializeField] protected Text text;
+    [SerializeField] protected Text amount;
+    [SerializeField] protected Text itemName;
     [SerializeField] protected Image image;
 
     protected Transform draggingParent;
     protected Transform originalContainer;
-    public IItem Item { get; private set; }
+    protected BaseInvertory Invertory;
+
+    public AssetItems AssetItem { get; private set; }
+
+    protected void Init(BaseInvertory boxInvertory)
+    {
+        this.Invertory = boxInvertory;
+    }
 
     
-    public void OnBeginDrag(PointerEventData eventData)
+    public virtual void OnBeginDrag(PointerEventData eventData)
+    {
+        UnAttachFromParent();
+        Invertory.RemoveItem(this);
+    }
+
+    public void UnAttachFromParent()
     {
         transform.parent = draggingParent;
     }
@@ -25,13 +39,33 @@ public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandle
         transform.position = Input.mousePosition;
     }
 
-    public abstract void OnEndDrag(PointerEventData eventData);
-
-    public void Render(IItem item)
+    public virtual void OnEndDrag(PointerEventData eventData)
     {
-        text.text = item.Name;
-        image.sprite = item.Sprite;
-        this.Item = item;
+        //FindAndSetInClosestPosition(originalContainer);
+        originalContainer.parent.parent.GetComponent<BaseInvertory>().AddNewItem(this);
+    }
+
+    public void FindAndSetInClosestPosition(Transform container)
+    {
+        // определение ближайшей позиции внутри контейнера
+        int closestIndex = 0;
+        for (int i = 0; i < container.transform.childCount; i++)
+        {
+            if (Vector3.Distance(transform.position, container.GetChild(i).position) <
+                Vector3.Distance(transform.position, container.GetChild(closestIndex).position))
+                closestIndex = i;
+        }
+        // встаем в эту позицию
+        transform.parent = container;
+        transform.SetSiblingIndex(closestIndex);
+    }
+
+    public void Render(AssetItems items)
+    {
+        amount.text = items.Count.ToString();
+        itemName.text = items.ItemType.Name;
+        image.sprite = items.ItemType.Sprite;
+        this.AssetItem = items;
     }
 
     public void OnPointerClick(PointerEventData eventData)

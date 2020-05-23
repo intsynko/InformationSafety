@@ -16,9 +16,11 @@ public class DataToSave
     public string lastSceneName;
     public Vector3 lastPostion;
     public List<ScenePosition> scenePositions;
-    public List<string> playerAssetItems;
+    // предметы игрока
+    public List<string> playerAssetItemsNames;
+    public List<int> playerAssetItemsCount;
 
-    
+
 
     /// <summary>
     /// Создание нового файла статистики
@@ -36,6 +38,8 @@ public class DataToSave
         new ScenePosition(){ SceneName="FirstScene",    spawnPosition = new Vector3(0, 4) },
         new ScenePosition(){ SceneName="Room",          spawnPosition = new Vector3(-8, 2) }
         };
-        playerAssetItems = new List<string>();
+        AssetItemsState playerAssetItems = new AssetItemsState(new List<Tuple<string, int>>());
+        playerAssetItemsNames = playerAssetItems.AssetItemNames;
+        playerAssetItemsCount = playerAssetItems.AssetItemsCount;
     }
 }

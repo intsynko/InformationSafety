@@ -3,17 +3,22 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using System;
 
 public class AssetItemsSaver : StateSaver
 {
     [Inject] private ItemsPool itemsPool;
 
-    [SerializeField] private List<AssetItem> startAsset;
-    private List<string> AssetItemNames;
+    [SerializeField] public List<AssetItems> startAsset;
+    private List<Tuple<string, int>> AssetItemNames;
 
-    public List<AssetItem> GetItems()
+    public List<AssetItems> GetItems()
     {
-        return AssetItemNames.Select(name => itemsPool.GetAssetItemByName(name)).ToList();
+        return AssetItemNames
+            .Select(name => new AssetItems() {
+                ItemType = itemsPool.GetAssetItemByName(name.Item1),
+                Count = name.Item2
+            }).ToList();
     }
 
     protected override string GetSpecificName()
@@ -27,29 +32,51 @@ public class AssetItemsSaver : StateSaver
         ConvertAssetItemsToNames(startAsset);
     }
 
-    public void ConvertAssetItemsToNames(List<AssetItem> assetItems)
+    public void ConvertAssetItemsToNames(List<AssetItems> assetItems)
     {
-        AssetItemNames = assetItems.Select(item => item.Name).ToList();
+        AssetItemNames = assetItems.Select(item => new Tuple<string, int>(item.ItemType.Name, item.Count)).ToList();
     }
 
     protected override string ToJson()
     {
+        
         // сохранить все переменные
-        return JsonUtility.ToJson(new AssetItemsState()
-        {
-            AssetItemNames = this.AssetItemNames
-        });
+        string a = JsonUtility.ToJson(new AssetItemsState(this.AssetItemNames));
+        return a;
     }
 
     protected override void Apply(string serializeObject)
     {
         AssetItemsState state = JsonUtility.FromJson<AssetItemsState>(serializeObject);
         // применить все сохраненные переменные
-        this.AssetItemNames = state.AssetItemNames;
+        this.AssetItemNames = state.NamesAndCountToList();
     }
 }
 
-public struct AssetItemsState
+public class AssetItemsState
 {
     public List<string> AssetItemNames;
+    public List<int> AssetItemsCount;
+
+    public List<Tuple<string, int>> NamesAndCountToList()
+    {
+        return AssetItemNames.Join(
+            AssetItemsCount,
+            n => AssetItemNames.IndexOf(n),
+            c => AssetItemsCount.IndexOf(c),
+            (n, c) => new Tuple<string, int>(n, c)
+            ).ToList();
+    }
+
+    public AssetItemsState(List<Tuple<string, int>> tuples)
+    {
+        AssetItemNames = tuples.Select(i => i.Item1).ToList();
+        AssetItemsCount = tuples.Select(i => i.Item2).ToList();
+    }
+
+    public AssetItemsState(List<string> AssetItemNames, List<int> AssetItemsCount)
+    {
+        this.AssetItemNames = AssetItemNames;
+        this.AssetItemsCount = AssetItemsCount;
+    }
 }
