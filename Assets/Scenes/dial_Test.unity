@@ -329,9 +329,9 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: OpenWorld/Test/Cripto_1
-  conversationConversant: {fileID: 1792001160}
-  conversationActor: {fileID: 1475840736}
+  conversation: OpenWorld/Obuchenie/Obuchenie 1.4
+  conversationConversant: {fileID: 1475840736}
+  conversationActor: {fileID: 1792001160}
   startConversationEntryID: -1
   exclusive: 0
   skipIfNoValidEntries: 1
