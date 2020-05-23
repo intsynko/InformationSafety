@@ -5,9 +5,23 @@ using UnityEngine;
 public class LayerDependPosition : MonoBehaviour
 {
     public SpriteRenderer sprite;
+    public bool isStatic = true;
+
+    private void Start()
+    {
+        UpdateLayerOrder();
+    }
 
     private void Update()
     {
-        sprite.sortingOrder = - (int) (transform.position.y * 100);
+        if (!isStatic)
+        {
+            UpdateLayerOrder();
+        }
+    }
+
+    private void UpdateLayerOrder()
+    {
+        sprite.sortingOrder = -(int)(transform.position.y * 100);
     }
 }
