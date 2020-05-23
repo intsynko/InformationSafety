@@ -329,7 +329,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: OpenWorld/Test/Cripto1
+  conversation: OpenWorld/Test/Cripto_1
   conversationConversant: {fileID: 1792001160}
   conversationActor: {fileID: 1475840736}
   startConversationEntryID: -1
