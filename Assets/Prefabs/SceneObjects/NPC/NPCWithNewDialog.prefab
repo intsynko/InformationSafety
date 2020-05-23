@@ -45,7 +45,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: StartScene/Elder
+  conversation: OpenWorld/Obuchenie/Obuchenie 1.1
   conversationConversant: {fileID: 5739029610445170077}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -66,7 +66,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: ee3e357c1dace5e468fa9814417c033b, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 7bd7398513038d946b9b9ebf6c7406d9, type: 2}
 --- !u!114 &1010036377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Elder
+  actor: NPC
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 7251509616737203914, guid: ff40b0b0f8fa88443aafa3b8ad6015c5,
         type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPCWithNewDialog
       objectReference: {fileID: 0}
     - target: {fileID: 7251509616737203916, guid: ff40b0b0f8fa88443aafa3b8ad6015c5,
         type: 3}
@@ -207,6 +207,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6624807984320093832}
     m_Modifications:
+    - target: {fileID: 289658217855225257, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 289658217855225257, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009823375338739876, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1010036381}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8140154445192026419, guid: 56283a055168603499c22819c55cb81a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,41 +322,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.057196338
       objectReference: {fileID: 0}
-    - target: {fileID: 1009823375338739876, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1010036381}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6772234825161126012, guid: 56283a055168603499c22819c55cb81a,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8648497826425938927, guid: 56283a055168603499c22819c55cb81a,
         type: 3}
       propertyPath: m_Sprite
@@ -323,15 +333,15 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 289658217855225257, guid: 56283a055168603499c22819c55cb81a,
+    - target: {fileID: 8648497826425938927, guid: 56283a055168603499c22819c55cb81a,
         type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 7.09
+      propertyPath: m_SortingLayerID
+      value: 107584809
       objectReference: {fileID: 0}
-    - target: {fileID: 289658217855225257, guid: 56283a055168603499c22819c55cb81a,
+    - target: {fileID: 8648497826425938927, guid: 56283a055168603499c22819c55cb81a,
         type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.75
+      propertyPath: m_SortingLayer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56283a055168603499c22819c55cb81a, type: 3}

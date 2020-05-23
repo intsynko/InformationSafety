@@ -45,7 +45,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: StartScene/Chest/Chest_1
+  conversation: OpenWorld/Chests/Chest1
   conversationConversant: {fileID: 722692321222070116}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -66,7 +66,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: ee3e357c1dace5e468fa9814417c033b, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 7bd7398513038d946b9b9ebf6c7406d9, type: 2}
 --- !u!114 &1729961101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ PrefabInstance:
     - target: {fileID: 125692691891556473, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
         type: 3}
       propertyPath: m_Name
-      value: ChestWithQuestion
+      value: ChestWithQuestion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 125692691891556474, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
         type: 3}
@@ -166,11 +166,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4940173877973183679, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
-        type: 3}
-      propertyPath: SpecificObjectName
-      value: chest_1
-      objectReference: {fileID: 0}
     - target: {fileID: 464155051566750786, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
         type: 3}
       propertyPath: startAsset.Array.size
@@ -218,6 +213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940173877973183679, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
+        type: 3}
+      propertyPath: SpecificObjectName
+      value: chest_1
       objectReference: {fileID: 0}
     - target: {fileID: 9105785006037872661, guid: a3a98b5e78dbf5946b0d01b3e6bff959,
         type: 3}
