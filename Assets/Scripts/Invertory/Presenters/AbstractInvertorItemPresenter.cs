@@ -7,6 +7,7 @@ using Zenject;
 
 public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    [Inject] private MessageBox messageBox;
     [SerializeField] protected Text amount;
     [SerializeField] protected Text itemName;
     [SerializeField] protected Image image;
@@ -17,12 +18,22 @@ public abstract class AbstractInvertorItemPresenter : MonoBehaviour, IDragHandle
 
     public AssetItems AssetItem { get; private set; }
 
-    protected void Init(BaseInvertory boxInvertory)
+    protected void Init(BaseInvertory baseInvertory)
     {
-        this.Invertory = boxInvertory;
+        this.Invertory = baseInvertory;
     }
 
-    
+    public void Click()
+    {
+        Debug.Log("Click");
+        if (AssetItem.ItemType is AssetItemWithInfo)
+        {
+            var a = AssetItem.ItemType as AssetItemWithInfo;
+            messageBox.ShowObjectInfo(a.Name, a.Description, a.Content, a.Sprite);
+        }
+    }
+
+
     public virtual void OnBeginDrag(PointerEventData eventData)
     {
         UnAttachFromParent();

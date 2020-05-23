@@ -10,6 +10,7 @@ public class MessageBox : MonoBehaviour
     [SerializeField] private GameObject _question;
     [SerializeField] private GameObject _message;
     [SerializeField] private GameObject _saveBar;
+    [SerializeField] private GameObject _infoTable;
 
     private string answer = "";
 
@@ -62,6 +63,16 @@ public class MessageBox : MonoBehaviour
         while (saveBarAnim.isPlaying) { await Task.Yield(); }
         _saveBar.SetActive(false);
     }
+
+    public void ShowObjectInfo(string name, string description, string content, Sprite sprite)
+    {
+        _infoTable.SetActive(true);
+        _infoTable.transform.Find("Name").GetComponent<Text>().text = name;
+        _infoTable.transform.Find("Descroption").Find("DescroptionText").GetComponent<Text>().text = description;
+        _infoTable.transform.Find("ImageTable").Find("Image").GetComponent<Image>().sprite = sprite;
+        _infoTable.transform.Find("Content").Find("ContentText").GetComponent<Text>().text = content;
+    }
+
     /// <summary>
     /// Сбросить ответ
     /// </summary>

@@ -20,6 +20,8 @@ public abstract class BaseInvertory : MonoBehaviour
     /// </summary>
     [Inject] private SaveManager saveManager;
 
+    [Inject] DiContainer _container;
+
     /// <summary>
     /// Коллеция преметов, которая лежат в контейнере
     /// </summary>
@@ -76,7 +78,8 @@ public abstract class BaseInvertory : MonoBehaviour
             Destroy(child.gameObject);
         assetItems.ForEach(item =>
         {
-            var obj = Instantiate(GetPresenter(), container);
+            var obj = _container.InstantiatePrefab(GetPresenter(), container).GetComponent<AbstractInvertorItemPresenter>();
+            //var obj = Instantiate(GetPresenter(), container);
             Initialisation(obj, item);
         });
     }

@@ -7,8 +7,9 @@ using Zenject;
 
 public class MonoInvertoryItemPresenter : AbstractInvertorItemPresenter
 {
-    public void Init(Transform draggingParent)
+    public void Init(Invertory invertory, Transform draggingParent)
     {
+        base.Init(invertory);
         this.draggingParent = draggingParent;
         originalContainer = transform.parent;
     }

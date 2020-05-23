@@ -24,9 +24,12 @@ public class InventorySelectorMenu : MonoBehaviour
 
     public void OpenCloseMonoInvertory()
     {
-        if (!monoInventoryIsOpened)
+        if (!monoInventoryIsOpened) {
             animationBase["Invertoty"].speed = 1;
-        else {
+            monoInventory.Render();
+        }
+        else
+        {
             animationBase["Invertoty"].speed = -1;
             animationBase["Invertoty"].time = animationBase["Invertoty"].length;
         }

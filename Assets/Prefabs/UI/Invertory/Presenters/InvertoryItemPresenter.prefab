@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 6275701891850214129}
   - component: {fileID: 5141178823839193866}
   - component: {fileID: 6449824702646541077}
+  - component: {fileID: 5739542829063587432}
   m_Layer: 5
   m_Name: InvertoryItemPresenter
   m_TagString: Untagged
@@ -242,6 +243,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5739542829063587432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762221859531158571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &9086598555513031670
 GameObject:
   m_ObjectHideFlags: 0
