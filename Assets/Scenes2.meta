@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes2.meta
 guid: f014b9a46f646b5409b5dcc9b26c4d98
+=======
+guid: 93e30747ca9554e4c94bdc5427261b0a
+>>>>>>> dialogs:Assets/_TerrainAutoUpgrade.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
