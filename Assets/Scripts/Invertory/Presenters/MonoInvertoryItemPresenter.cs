@@ -15,6 +15,7 @@ public class MonoInvertoryItemPresenter : AbstractInvertorItemPresenter
 
     public override void OnEndDrag(PointerEventData eventData)
     {
+        // определение ближайшей позиции
         int closestIndex = 0;
         for (int i=0; i < originalContainer.transform.childCount; i++)
         {

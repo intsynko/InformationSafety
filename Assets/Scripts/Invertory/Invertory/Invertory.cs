@@ -6,19 +6,19 @@ using UnityEngine;
 public class Invertory : BaseInvertory
 {
     [SerializeField] protected MonoInvertoryItemPresenter presenter;
-    [SerializeField] private List<AssetItem> assetItems;
-    public bool IsOpened = false;
+    [SerializeField] private List<AssetItems> assetItems;
+    //public bool IsOpened = false;
 
     private void OnEnable()
     {
         Render(assetItems);
     }
 
-    public override void Initialisation(AbstractInvertorItemPresenter obj, IItem item)
+    public override void Initialisation(AbstractInvertorItemPresenter obj, AssetItems assetItems)
     {
         var itemPresenter = (MonoInvertoryItemPresenter)obj;
         itemPresenter.Init(transform.parent);
-        itemPresenter.Render(item);
+        itemPresenter.Render(assetItems);
     }
 
     public override AbstractInvertorItemPresenter GetPresenter()
