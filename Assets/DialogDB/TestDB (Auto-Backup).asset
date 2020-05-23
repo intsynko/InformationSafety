@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: TestDB
+  m_Name: TestDB (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 0.1
   author: Kostya
@@ -359,7 +359,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 642
-        y: 144.26582
+        y: 143
         width: 160
         height: 30
     - id: 2
@@ -429,8 +429,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 549.4684
-        y: 194.26584
+        x: 552
+        y: 193
         width: 160
         height: 30
     - id: 3
@@ -924,8 +924,8 @@ MonoBehaviour:
         y: 293.00003
         width: 160
         height: 30
-    canvasScrollPosition: {x: 330.43674, y: 65.953896}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 222.09851, y: 12.537461}
+    canvasZoom: 0.58000034
   - id: 2
     fields:
     - title: Title
