@@ -37,7 +37,7 @@ public class DataToSave
         new ScenePosition(){ SceneName="MainMenu" },
         new ScenePosition(){ SceneName="FirstScene",    spawnPosition = new Vector3(0, 4) },
         new ScenePosition(){ SceneName="Room",          spawnPosition = new Vector3(-8, 2) },
-        new ScenePosition(){ SceneName="MainScene",     spawnPosition = new Vector3(24, 3) },
+        new ScenePosition(){ SceneName="MainScene",     spawnPosition = new Vector3(21, 6) },
         new ScenePosition(){ SceneName="Room0",         spawnPosition = new Vector3(0, 7) }
         };
         AssetItemsState playerAssetItems = new AssetItemsState(new List<Tuple<string, int>>());
