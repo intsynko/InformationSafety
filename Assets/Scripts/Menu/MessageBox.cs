@@ -68,7 +68,7 @@ public class MessageBox : MonoBehaviour
     /// <summary>
     /// Запустить анимацию подсказки
     /// </summary>
-    public async Task HelpBox(string message)
+    public async void HelpBox(string message)
     {
         _helpBox.SetActive(true);
         _helpBox.transform.Find("Text").GetComponent<Text>().text = message;

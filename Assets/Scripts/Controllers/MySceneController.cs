@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 public class MySceneController
 {
     [Inject] private SaveManager _saveManager;
+    [Inject] private DiContainer _container;
 
     public MySceneController(SaveManager saveManager)
     {
@@ -20,7 +21,7 @@ public class MySceneController
     public async Task LoadFirstScene(Vector3 player)
     {
         await LoadSceneAsyns("Room0", player);
-
+        await CutSceneController.RunCutsceneStatic("CutScene1");
     }
     public void LoadMainMenu(Vector3 player)
     {

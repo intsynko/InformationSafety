@@ -63,3 +63,6 @@ TagManager:
   - name: House_up
     uniqueID: 107584809
     locked: 0
+  - name: Highest
+    uniqueID: 2940954403
+    locked: 0
