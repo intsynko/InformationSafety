@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4723153724133931836}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -8.43, y: 1.59, z: 0}
   m_LocalScale: {x: 1.1922611, y: 1.2157011, z: 1}
   m_Children:
@@ -49,7 +49,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0059241652, y: 0.3960125}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SafePoint: {fileID: 4723153725177654354}
   TriggerZone: {fileID: 4723153724133931826}
-  NextSceneName: FirstScene
+  NextSceneName: MainScene
   OnTeleport:
     m_PersistentCalls:
       m_Calls: []

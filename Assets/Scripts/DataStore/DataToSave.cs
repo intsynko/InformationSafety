@@ -38,7 +38,11 @@ public class DataToSave
         new ScenePosition(){ SceneName="FirstScene",    spawnPosition = new Vector3(0, 4) },
         new ScenePosition(){ SceneName="Room",          spawnPosition = new Vector3(-8, 2) },
         new ScenePosition(){ SceneName="MainScene",     spawnPosition = new Vector3(21, 6) },
-        new ScenePosition(){ SceneName="Room0",         spawnPosition = new Vector3(0, 7) }
+        new ScenePosition(){ SceneName="Room0",         spawnPosition = new Vector3(0, 7) },
+
+        new ScenePosition(){ SceneName="Room1",         spawnPosition = new Vector3(-6, 6) },
+        new ScenePosition(){ SceneName="Room2",         spawnPosition = new Vector3(-6, 7) },
+        new ScenePosition(){ SceneName="Room3",         spawnPosition = new Vector3(-6, 6) }
         };
         AssetItemsState playerAssetItems = new AssetItemsState(new List<Tuple<string, int>>());
         playerAssetItemsNames = playerAssetItems.AssetItemNames;
