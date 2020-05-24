@@ -23,11 +23,11 @@ public class SelectorMenu : MonoBehaviour
         {
             _saveManager.Discharge();
         }
-        catch (System.IO.IOException ex) {
+        catch (System.IO.IOException) {
             message = "Не удается удалить предыдущие сохранения. Не хватает прав.";
             await _messageBox.Message(message);
         }
-        _mySceneController.LoadFirstScene(Vector3.zero);
+        await _mySceneController.LoadFirstScene(Vector3.zero);
     }
 
     public void ContinueGame()

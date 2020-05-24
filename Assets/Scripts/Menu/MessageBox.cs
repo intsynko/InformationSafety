@@ -11,6 +11,7 @@ public class MessageBox : MonoBehaviour
     [SerializeField] private GameObject _message;
     [SerializeField] private GameObject _saveBar;
     [SerializeField] private GameObject _infoTable;
+    [SerializeField] private GameObject _helpBox;
 
     private string answer = "";
 
@@ -62,6 +63,19 @@ public class MessageBox : MonoBehaviour
         _saveBar.transform.Find("Bar").GetComponent<Animation>().Play("Rotate");
         while (saveBarAnim.isPlaying) { await Task.Yield(); }
         _saveBar.SetActive(false);
+    }
+
+    /// <summary>
+    /// Запустить анимацию подсказки
+    /// </summary>
+    public async Task HelpBox(string message)
+    {
+        _helpBox.SetActive(true);
+        _helpBox.transform.Find("Text").GetComponent<Text>().text = message;
+        Animation helpBoxAnim = _helpBox.GetComponent<Animation>();
+        helpBoxAnim.Play("UpAndDown");
+        while (helpBoxAnim.isPlaying) { await Task.Yield(); }
+        _helpBox.SetActive(false);
     }
 
     public void ShowObjectInfo(string name, string description, string content, Sprite sprite)

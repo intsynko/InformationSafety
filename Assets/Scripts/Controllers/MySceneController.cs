@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 using System;
 using Zenject;
+using System.Threading.Tasks;
 
 public class MySceneController
 {
@@ -16,16 +17,26 @@ public class MySceneController
         this._saveManager = saveManager;
     }
 
-    public void LoadFirstScene(Vector3 player)
+    public async Task LoadFirstScene(Vector3 player)
     {
-        LoadScene("FirstScene", player);
+        await LoadSceneAsyns("Room0", player);
+
     }
     public void LoadMainMenu(Vector3 player)
     {
         LoadScene("MainMenu", player);
     }
 
-    public void LoadScene(string sceneName, Vector3 player)
+    public async Task LoadSceneAsyns(string sceneName, Vector3 player)
+    {
+        SaveLastScenePosition(player);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        _saveManager.SavePlayerProgress();
+        while (asyncOperation.isDone)
+            await Task.Yield();
+    }
+
+    public async void LoadScene(string sceneName, Vector3 player)
     {
         SaveLastScenePosition(player);
         SceneManager.LoadScene(sceneName);
