@@ -1169,6 +1169,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878419614148111467, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419614148111467, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878419614177052114, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1279,6 +1289,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7878419614963063884, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419614963063884, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419614963063884, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419614963063884, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878419615069825713, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1287,6 +1317,21 @@ PrefabInstance:
     - target: {fileID: 7878419615069825713, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419615069825713, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419615267549379, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878419615267549379, guid: c2e7f3cb18a3dc64baef2dc79a5e0b30,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2006,6 +2051,26 @@ PrefabInstance:
       propertyPath: conversation
       value: OpenWorld/Test/Cripto_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6406828025623763521, guid: 5c2b0c6aaae6e1648917e466e7aae332,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406828025623763521, guid: 5c2b0c6aaae6e1648917e466e7aae332,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42539722
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406828025623763521, guid: 5c2b0c6aaae6e1648917e466e7aae332,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406828025623763521, guid: 5c2b0c6aaae6e1648917e466e7aae332,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.42269394
+      objectReference: {fileID: 0}
     - target: {fileID: 6624807984320093832, guid: 5c2b0c6aaae6e1648917e466e7aae332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2066,6 +2131,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCWithNewDialog
       objectReference: {fileID: 0}
+    - target: {fileID: 7529869774899966339, guid: 5c2b0c6aaae6e1648917e466e7aae332,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5188769300961926928, guid: 34cfe781bd436e44ea80f90d12848d23,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c2b0c6aaae6e1648917e466e7aae332, type: 3}
 --- !u!1 &836508885

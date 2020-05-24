@@ -6523,9 +6523,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B!
-          \u0422\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u043D\u0430  [lua(Variable[\"ExamPoint\"])]  \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432"
+        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B! "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -6565,7 +6563,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 509.0677
+        x: 507.42834
         y: 873.88666
         width: 160
         height: 30
@@ -6597,10 +6595,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0442\u044B
-          \u043D\u0435 \u0441\u0434\u0430\u043B! \u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
-          \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u044B\u0435
-          \u0442\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u0440\u0430\u0432\u043D\u043E  [lua(Variable[\"ExamPoint\"])]"
+          \u043D\u0435 \u0441\u0434\u0430\u043B!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -8882,8 +8877,8 @@ MonoBehaviour:
         y: 923.97076
         width: 160
         height: 30
-    canvasScrollPosition: {x: 58.223064, y: 193.56241}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 117.85072}
+    canvasZoom: 0.6100004
   - id: 6
     fields:
     - title: Title
@@ -12155,9 +12150,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B!
-          \u0422\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u043D\u0430  [lua(Variable[\"ExamPoint\"])]  \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432"
+        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B! "
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -12294,10 +12287,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0442\u044B
-          \u043D\u0435 \u0441\u0434\u0430\u043B! \u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
-          \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u044B\u0435
-          \u0442\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u0440\u0430\u0432\u043D\u043E  [lua(Variable[\"ExamPoint\"])]"
+          \u043D\u0435 \u0441\u0434\u0430\u043B"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -12548,8 +12538,8 @@ MonoBehaviour:
         y: 600.6102
         width: 160
         height: 30
-    canvasScrollPosition: {x: 2.4390259, y: 31.707336}
-    canvasZoom: 0.82000035
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.4300005
   - id: 7
     fields:
     - title: Title
@@ -15892,9 +15882,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B!
-          \u0422\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u043D\u0430 [lua(Variable[\"ExamPoint\"])]   \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432"
+        value: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446, \u0442\u044B \u0441\u0434\u0430\u043B!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -15934,7 +15922,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 263.95486
+        x: 265.5942
         y: 728.79346
         width: 160
         height: 30
@@ -16031,10 +16019,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0442\u044B
-          \u043D\u0435 \u0441\u0434\u0430\u043B! \u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
-          \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432, \u043D\u0430 \u043A\u043E\u0442\u043E\u0440\u044B\u0435
-          \u0442\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u043B \u0432\u0435\u0440\u043D\u043E
-          \u0440\u0430\u0432\u043D\u043E  [lua(Variable[\"ExamPoint\"])]"
+          \u043D\u0435 \u0441\u0434\u0430\u043B"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -16434,7 +16419,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.76000017
+    canvasZoom: 0.6100003
   - id: 8
     fields:
     - title: Title
