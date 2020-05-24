@@ -2004,7 +2004,7 @@ PrefabInstance:
     - target: {fileID: 4621565092684217221, guid: 5c2b0c6aaae6e1648917e466e7aae332,
         type: 3}
       propertyPath: conversation
-      value: "OpenWorld/Test/Test (\u0442\u0435\u0441\u0442\u043E\u0432\u044B\u0439)"
+      value: OpenWorld/Test/Cripto_1
       objectReference: {fileID: 0}
     - target: {fileID: 6624807984320093832, guid: 5c2b0c6aaae6e1648917e466e7aae332,
         type: 3}

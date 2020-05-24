@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 2579189217424902280}
   - component: {fileID: 5703585531000618749}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Descroption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 1583976083030243660}
   - component: {fileID: 6050382397967814874}
   m_Layer: 5
-  m_Name: Descroption
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 4843100114168369506}
   - component: {fileID: 2693388051141641091}
   m_Layer: 5
-  m_Name: ContentText
+  m_Name: DescroptionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 4322788157437968147}
   - component: {fileID: 653330599268700850}
   m_Layer: 5
-  m_Name: DescroptionText
+  m_Name: ContentText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
