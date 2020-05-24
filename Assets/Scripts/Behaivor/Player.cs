@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     private async void Start()
     {
+        moveByPathFinder.BoxCollider2D = GetComponent<BoxCollider2D>();
         moveByPathFinder.enabled = false;
         _mySceneController.TeleportMeIfIMust(gameObject);
         await _messageBox.SaveAnim();

@@ -14,6 +14,8 @@ public class MoveByPathFinder : Move
         }
     }
 
+    public BoxCollider2D BoxCollider2D { set { this.boxCollider2D = value; } }
+
     public async void MoveToEntityE(Transform transform)
     {
         await MoveToEntity(transform);
@@ -25,9 +27,11 @@ public class MoveByPathFinder : Move
         myAIPath.enabled = true;
         myAIPath.isComplited = false;
         boxCollider2D.enabled = false;
+        Debug.Log("box collider off");
         await Task.Yield();
         while (!myAIPath.isComplited) await Task.Yield();
         myAIPath.enabled = false;
         boxCollider2D.enabled = true;
+        Debug.Log("boxCollider2D on");
     }
 }
