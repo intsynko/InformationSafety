@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66c23d85afab1ff40afea04817a69e75, type: 3}
-  m_Name: Invertory
+  m_Name: ring
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
+  name: "\u041A\u043E\u043B\u044C\u0446\u043E"
+  sprite: {fileID: 21300000, guid: 11ecd5091ac831747bf5f68c18a82707, type: 3}

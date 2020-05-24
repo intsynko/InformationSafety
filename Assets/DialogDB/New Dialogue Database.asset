@@ -202,6 +202,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 6
+    fields:
+    - title: Name
+      value: StudingLevel
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -26378,6 +26392,18 @@ MonoBehaviour:
         destinationDialogueID: 46
         isConnector: 0
         priority: 2
+      - originConversationID: 34
+        originDialogueID: 1
+        destinationConversationID: 34
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      - originConversationID: 34
+        originDialogueID: 1
+        destinationConversationID: 34
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -27768,7 +27794,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["StudingLevel"] = Variable["StudingLevel"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27853,7 +27879,7 @@ MonoBehaviour:
         destinationDialogueID: 25
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["StudingLevel"] == 1
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -28080,7 +28106,7 @@ MonoBehaviour:
         destinationDialogueID: 47
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["StudingLevel"] == 2
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -28146,7 +28172,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["StudingLevel"] = Variable["StudingLevel"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28156,8 +28182,459 @@ MonoBehaviour:
         y: 247.87488
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6400003
+    - id: 48
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u041F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u043E, \u0442\u044B
+          \u0434\u043E\u043A\u0430\u0437\u0430\u043B, \u0447\u0442\u043E \u0443\u0441\u0432\u043E\u0438\u043B
+          \u044D\u0442\u0443 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E.
+          \u0414\u0430\u043B\u044C\u0448\u0435 \u043A\u0430\u043A \u043D\u0438\u0431\u0443\u0434\u044C
+          \u0441\u0430\u043C. \u0412\u0441\u0442\u0440\u0435\u0442\u0438\u043C\u0441\u044F
+          \u043D\u0430 \u044D\u0442\u043E\u043C \u043C\u0435\u0441\u0442\u0435, \u043A\u043E\u0433\u0434\u0430
+          \u0441\u043E\u0431\u0435\u0440\u0451\u0448\u044C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0435
+          \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u043E\u043B\u043E\u0442\u0430,
+          \u043D\u043E \u043D\u0435 \u0437\u0430\u0431\u044B\u0432\u0430\u0439 \u0438
+          \u043F\u0440\u043E \u0442\u0435\u043E\u0440\u0438\u044E. \u0422\u0435\u043E\u0440\u0438\u044F
+          \u0440\u0430\u0437\u0433\u0440\u0430\u043D\u0438\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F
+          \u043F\u043E \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u044E \u043A \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u043E\u0439
+          \u0442\u0435\u043C\u0435. \u0416\u0435\u043B\u0430\u044E \u0443\u0434\u0430\u0447\u0438!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 34
+        originDialogueID: 48
+        destinationConversationID: 34
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["StudingLevel"] == 3
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 646.56213
+        y: 193.74992
+        width: 160
+        height: 30
+    - id: 49
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u0410\u0433\u0430, \u0434\u043E \u0432\u0441\u0442\u0440\u0435\u0447\u0438!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["StudingLevel"] = Variable["StudingLevel"] + 1
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 646.56213
+        y: 243.74991
+        width: 160
+        height: 30
+    - id: 50
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u042F \u0442\u0430\u043A \u043F\u043E\u043B\u0430\u0433\u0430\u044E,
+          \u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0435
+          \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0437\u043E\u043B\u043E\u0442\u0430?"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 34
+        originDialogueID: 50
+        destinationConversationID: 34
+        destinationDialogueID: 51
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["StudingLevel"] == 4
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 837.2496
+        y: 196.31244
+        width: 160
+        height: 30
+    - id: 51
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u0414\u0430"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 34
+        originDialogueID: 51
+        destinationConversationID: 34
+        destinationDialogueID: 52
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 840.2496
+        y: 241.62494
+        width: 160
+        height: 30
+    - id: 52
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u0425\u043E\u0440\u043E\u0448\u043E, \u0442\u0435\u043F\u0435\u0440\u044C
+          \u0442\u0435\u0431\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+          \u0438\u0437\u0443\u0447\u0438\u0442\u044C \u0441\u043E\u0431\u0440\u0430\u043D\u043D\u0443\u044E
+          \u0442\u043E\u0431\u043E\u0439 \u0442\u0435\u043E\u0440\u0438\u044E \u0438
+          \u043F\u043E\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C \u043A
+          \u043C\u043E\u0438\u043C \u043A\u043E\u043B\u0435\u0433\u0430\u043C, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+          \u0431\u0443\u0434\u0443\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C
+          \u0440\u043E\u043B\u044C \u044D\u043A\u0437\u0430\u043C\u0435\u043D\u0430\u0442\u043E\u0440\u043E\u0432.
+          \u0422\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0432\u044B\u0431\u0440\u0430\u0442\u044C
+          \u0441\u0434\u0430\u0447\u0443 \u044D\u043A\u0437\u0430\u043C\u0435\u043D\u043E\u0432
+          \u0432 \u043B\u044E\u0431\u043E\u043C \u043F\u043E\u0440\u044F\u0434\u043A\u0435,
+          \u043D\u043E \u044F \u043D\u0430\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E
+          \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u044E \u0434\u043B\u044F
+          \u043D\u0430\u0447\u0430\u043B\u0430 \u0441\u043E\u0431\u0440\u0430\u0442\u044C
+          \u043F\u043E\u043B\u043D\u0443\u044E \u0442\u0435\u043E\u0440\u0438\u044E
+          \u043F\u043E \u0442\u0435\u043C\u0435 \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u043E\u0433\u043E
+          \u044D\u043A\u0437\u0430\u043C\u0435\u043D\u0430, \u0447\u0442\u043E\u0431\u044B
+          \u0438\u0437\u0443\u0447\u0438\u0442\u044C \u0435\u0435 \u043A\u0430\u043A
+          \u043C\u043E\u0436\u043D\u043E \u0433\u043B\u0443\u0431\u0436\u0435 \u0438,
+          \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043D\u043D\u043E,
+          \u0441\u0434\u0430\u0442\u044C \u044D\u043A\u0437\u0430\u043C\u0435\u043D
+          \u0431\u043E\u043B\u0435\u0435 \u0443\u0441\u043F\u0435\u0448\u043D\u043E.
+          \u0423\u0434\u0430\u0447\u0438 \u0432 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0438
+          \u043D\u043E\u0432\u044B\u0445 \u0437\u043D\u0430\u043D\u0438\u0439!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 34
+        originDialogueID: 52
+        destinationConversationID: 34
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 840.2496
+        y: 292.62494
+        width: 160
+        height: 30
+    - id: 53
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u0410\u0433\u0430...\u0431\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044E "
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 34
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["StudingLevel"] = Variable["StudingLevel"] + 1
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 840.2496
+        y: 341.62494
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 2.6294136, y: 0}
+    canvasZoom: 0.5200004
   syncInfo:
     syncActors: 0
     syncItems: 0

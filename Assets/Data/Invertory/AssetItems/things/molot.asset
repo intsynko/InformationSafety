@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c23d85afab1ff40afea04817a69e75, type: 3}
   m_Name: molot
   m_EditorClassIdentifier: 
-  name: 
-  sprite: {fileID: 0}
+  name: "\u041C\u043E\u043B\u043E\u0442\u043E\u043A"
+  sprite: {fileID: 21300000, guid: 4d69ea21aa611f749b29d50bf9bdb852, type: 3}
