@@ -1,16 +1,22 @@
-﻿using System.Collections;
+﻿using PixelCrushers.DialogueSystem;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public  delegate void CutsceneStart (string name);
 
 public class CutSceneController : MonoBehaviour
 {
     private static event CutsceneStart CutSceneStartEvent;
-    private bool sceneReady;
+    public UnityEvent DialogStartEvent;
+    public UnityEvent DialogEndEvent;
+
+    [Inject] private DialogueSystemEvents dialogueSystemEvents;
 
     public async static Task RunCutsceneStatic(string name)
     {
@@ -20,21 +26,33 @@ public class CutSceneController : MonoBehaviour
         Debug.Log($"вызываю событие запуска кат сцены {name}");
     }
 
+
     private void Start()
     {
+        dialogueSystemEvents.conversationEvents.
+            onConversationStart.AddListener((Transform a) => { DialogStart(); });
+        dialogueSystemEvents.conversationEvents.
+            onConversationEnd.AddListener((Transform a) => { DialofEnd(); });
         CutSceneStartEvent += RunCutscene;
-        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-    }
-
-    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
-    {
-        sceneReady = true;
     }
 
     private void OnDestroy()
     {
         CutSceneStartEvent -= RunCutscene;
     }
+
+    private void DialogStart()
+    {
+        DialogStartEvent.Invoke();
+    }
+
+
+    private void DialofEnd()
+    {
+        DialogEndEvent.Invoke();
+    }
+
+    
 
     public void RunCutscene(string name)
     {

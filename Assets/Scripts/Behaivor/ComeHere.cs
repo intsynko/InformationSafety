@@ -6,11 +6,11 @@ using Zenject;
 public class ComeHere : MonoBehaviour
 {
     public MyEvent OnCame;
-    [Inject] private Move player;
+    [Inject] private Player player;
 
     public async void CallPlayer()
     {
-        await player.MoveToEntity(transform);
+        await player.GoHere(transform);
         OnCame.Invoke();
     }
 }

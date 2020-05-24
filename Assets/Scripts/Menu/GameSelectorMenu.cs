@@ -12,7 +12,7 @@ public class GameSelectorMenu : MonoBehaviour
     [SerializeField] private GameObject settings;
     [Inject] private MessageBox _messageBox;
     [Inject] private JoysticController _joysticController;
-    [Inject] private Move move;
+    [Inject] private Player player;
     [Inject] private SaveManager saveManager;
 
     public void Settings()
@@ -45,6 +45,6 @@ public class GameSelectorMenu : MonoBehaviour
     public async void Exit()
     {
         if (await _messageBox.Question("Вы уверены что хотите выйти в главное меню?"))
-            _mySceneController.LoadScene("MainMenu", move.transform.position);
+            _mySceneController.LoadScene("MainMenu", player.transform.position);
     }
 }
