@@ -48,4 +48,32 @@ public class DataToSave
         playerAssetItemsNames = playerAssetItems.AssetItemNames;
         playerAssetItemsCount = playerAssetItems.AssetItemsCount;
     }
+
+
+    /// <summary>
+    /// Загрузить предметы игрока
+    /// </summary>
+    /// <returns></returns>
+    public List<AssetItems> GetPlayerItems(ItemsPool itemsPool)
+    {
+        return new AssetItemsState(this.playerAssetItemsNames, this.playerAssetItemsCount).NamesAndCountToList()
+            .Select(item => new AssetItems()
+            {
+                ItemType = itemsPool.GetAssetItemByName(item.Item1),
+                Count = item.Item2
+            }).ToList();
+    }
+
+    /// <summary>
+    /// Сохранть предметы игрока
+    /// </summary>
+    /// <param name="assetItem"></param>
+    public void SetPlayerItems(List<AssetItems> assetItem)
+    {
+        AssetItemsState a = new AssetItemsState(assetItem.Select(
+            item => new Tuple<string, int>(item.ItemType.Name, item.Count)
+        ).ToList());
+        this.playerAssetItemsNames = a.AssetItemNames;
+        this.playerAssetItemsCount = a.AssetItemsCount;
+    }
 }

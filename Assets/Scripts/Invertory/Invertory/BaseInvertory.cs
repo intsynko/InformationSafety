@@ -34,13 +34,7 @@ public abstract class BaseInvertory : MonoBehaviour
     /// <returns></returns>
     public List<AssetItems> GetPlayerItems()
     {
-        DataToSave d2s = saveManager.dataToSave;
-        
-        return new AssetItemsState(d2s.playerAssetItemsNames, d2s.playerAssetItemsCount).NamesAndCountToList()
-            .Select(item => new AssetItems() {
-                ItemType = itemsPool.GetAssetItemByName(item.Item1),
-                Count = item.Item2
-            }).ToList();
+        return saveManager.dataToSave.GetPlayerItems(itemsPool);
     }
 
     /// <summary>
@@ -49,11 +43,7 @@ public abstract class BaseInvertory : MonoBehaviour
     /// <param name="assetItem"></param>
     public void SavePlayerData(List<AssetItems> assetItem)
     {
-        AssetItemsState a = new AssetItemsState(assetItem.Select(
-            item => new Tuple<string, int>(item.ItemType.Name, item.Count)
-        ).ToList());
-        saveManager.dataToSave.playerAssetItemsNames = a.AssetItemNames;
-        saveManager.dataToSave.playerAssetItemsCount = a.AssetItemsCount;
+        saveManager.dataToSave.SetPlayerItems(assetItem);
         saveManager.SavePlayerProgress();
     }
 
